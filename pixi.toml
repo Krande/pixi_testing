@@ -1,0 +1,12 @@
+[project]
+name = "pixi-tests"
+version = "1.0.0"
+description = "A pixi project for testing"
+channels = ["https://software.repos.intel.com/python/conda", "conda-forge"]
+platforms = ["win-64"]
+
+[dependencies]
+ifx_win-64 = "*"
+
+[tasks]
+info = {cmd=[ "where", "ifx"]}
