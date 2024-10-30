@@ -9,4 +9,5 @@ platforms = ["win-64"]
 ifx_win-64 = "*"
 
 [tasks]
-info = {cmd=[ "where", "ifx"]}
+info = { cmd = ["where", "ifx"] }
+ifx = { cmd = ["ifx", "/nologo", "/I$CONDA_PREFIX/Library/include", "/I$CONDA_PREFIX/Library/lib", "/I$CONDA_PREFIX/include"] }

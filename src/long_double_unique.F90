@@ -1,0 +1,26 @@
+MODULE type_mod
+    USE ISO_C_BINDING, ONLY: C_DOUBLE, C_LONG_DOUBLE
+    IMPLICIT NONE
+    INTEGER :: DOUBLE_SIZE, LONG_DOUBLE_SIZE
+    LOGICAL :: C_LONG_DOUBLE_IS_UNIQUE
+CONTAINS
+    SUBROUTINE initialize_sizes()
+        DOUBLE_SIZE = STORAGE_SIZE(0.0_C_DOUBLE) / 8  ! Convert bits to bytes
+        LONG_DOUBLE_SIZE = STORAGE_SIZE(0.0_C_LONG_DOUBLE) / 8  ! Convert bits to bytes
+        C_LONG_DOUBLE_IS_UNIQUE = (DOUBLE_SIZE /= LONG_DOUBLE_SIZE)
+    END SUBROUTINE initialize_sizes
+END MODULE type_mod
+
+PROGRAM PROG_FC_C_LONG_DOUBLE_EQ_C_DOUBLE
+    USE type_mod, ONLY: C_LONG_DOUBLE_IS_UNIQUE, initialize_sizes
+    IMPLICIT NONE
+
+    CALL initialize_sizes()
+
+    ! Output 1 if C_LONG_DOUBLE is unique, 0 otherwise
+    IF (C_LONG_DOUBLE_IS_UNIQUE) THEN
+        PRINT *, "1"
+    ELSE
+        PRINT *, "0"
+    END IF
+END PROGRAM PROG_FC_C_LONG_DOUBLE_EQ_C_DOUBLE

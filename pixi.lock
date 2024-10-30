@@ -1,0 +1,297 @@
+version: 5
+environments:
+  default:
+    channels:
+    - url: https://software.repos.intel.com/python/conda/
+    - url: https://conda.anaconda.org/conda-forge/
+    packages:
+      win-64:
+      - conda: https://software.repos.intel.com/python/conda/win-64/compiler_shared-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/ifx_impl_win-64-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/ifx_win-64-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/intel-cmplr-lib-rt-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/intel-cmplr-lib-ur-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/intel-cmplr-lic-rt-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/intel-fortran-rt-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/intel-opencl-rt-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/intel-openmp-2025.0.0-intel_1162.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/tbb-2022.0.0-vc14_intel_396.tar.bz2
+      - conda: https://software.repos.intel.com/python/conda/win-64/tcm-1.2.0-intel_583.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/win-64/ucrt-10.0.22621.0-h57928b3_1.conda
+      - conda: https://software.repos.intel.com/python/conda/win-64/umf-0.9.0-intel_584.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/win-64/vc-14.3-ha32ba9b_22.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/vc14_runtime-14.40.33810-hcc2c482_22.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/vs2022_win-64-19.41.34120-h72b6792_22.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/vs_win-64-2022.11-h72b6792_22.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/vswhere-3.1.7-h57928b3_0.conda
+packages:
+- kind: conda
+  name: compiler_shared
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/compiler_shared-2025.0.0-intel_1162.tar.bz2
+  sha256: 21be2b5b42d814641da64c8397dafa21410b10594736583b84d179ae332e37c3
+  md5: e3eae7def10d53e5aba4adb6ed1bb24b
+  license: Intel End User License Agreement for Developer Tools
+  size: 194935025
+  timestamp: 1729183438713
+- kind: conda
+  name: ifx_impl_win-64
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/ifx_impl_win-64-2025.0.0-intel_1162.tar.bz2
+  sha256: a346a82eb1676f9b0c6ec2d1f74781405db079968c84ff0639845755c623740e
+  md5: 85c5cba4a61a306ea2ac11638aef154b
+  depends:
+  - compiler_shared 2025.0.0 intel_1162
+  - intel-cmplr-lib-rt 2025.0.0 intel_1162
+  - intel-cmplr-lic-rt 2025.0.0 intel_1162
+  - intel-fortran-rt 2025.0.0 intel_1162
+  - intel-opencl-rt 2025.0.0 intel_1162
+  license: Intel End User License Agreement for Developer Tools
+  size: 28582857
+  timestamp: 1729183228928
+- kind: conda
+  name: ifx_win-64
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/ifx_win-64-2025.0.0-intel_1162.tar.bz2
+  sha256: 12ccfaf2879a5c397b1c421afdb0c8d4ee2735aa9b7e5f78fd49a336df2f694a
+  md5: 2fc8bfc09f5a34167fd61a2a709c9acc
+  depends:
+  - ifx_impl_win-64 2025.0.0 intel_1162
+  - vs_win-64
+  license: Intel End User License Agreement for Developer Tools
+  size: 18240
+  timestamp: 1729183322786
+- kind: conda
+  name: intel-cmplr-lib-rt
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/intel-cmplr-lib-rt-2025.0.0-intel_1162.tar.bz2
+  sha256: 25cde20f0376512753179e4b4f7f14137e651d4f441e31204cfe3fff6f8bb9dc
+  md5: c5f72759e8849395546a80c3cc999ab2
+  license: Intel End User License Agreement for Developer Tools
+  size: 15531186
+  timestamp: 1729183225195
+- kind: conda
+  name: intel-cmplr-lib-ur
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/intel-cmplr-lib-ur-2025.0.0-intel_1162.tar.bz2
+  sha256: 48e1f62d85082ff64a90b5ccf13a91f83028d71e1b1edbf4b15a3d9614a18496
+  md5: ce94a82e302d8f94a1901f16c16fe2bb
+  depends:
+  - umf 0.9.*
+  license: Intel End User License Agreement for Developer Tools
+  size: 1097162
+  timestamp: 1729183216961
+- kind: conda
+  name: intel-cmplr-lic-rt
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/intel-cmplr-lic-rt-2025.0.0-intel_1162.tar.bz2
+  sha256: 3ac6e5ba518da05658ff1be51a439f2784c9bb32cfcf2b0ea530868a3e97ae97
+  md5: 3da72e16f30e426b24027bf43607850d
+  license: Intel End User License Agreement for Developer Tools
+  size: 46914
+  timestamp: 1729183194771
+- kind: conda
+  name: intel-fortran-rt
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/intel-fortran-rt-2025.0.0-intel_1162.tar.bz2
+  sha256: a17189c18660e7475e139204de624140a7a431a562459305dab31c81c107942a
+  md5: a511662a07fa75bc14a77bbf8cbe8b1e
+  depends:
+  - intel-cmplr-lib-rt 2025.0.0 intel_1162
+  - intel-cmplr-lic-rt 2025.0.0 intel_1162
+  - intel-openmp 2025.0.0 intel_1162
+  constrains:
+  - fortran_rt >=2021.3.0
+  license: Intel End User License Agreement for Developer Tools
+  size: 2970094
+  timestamp: 1729183357278
+- kind: conda
+  name: intel-opencl-rt
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/intel-opencl-rt-2025.0.0-intel_1162.tar.bz2
+  sha256: 1993e553fa4ffd3346bdd950d6a0393d28293ea6a758607e16e87836537e548b
+  md5: dddce217f76d9026341440c75d5caac7
+  depends:
+  - intel-cmplr-lic-rt 2025.0.0 intel_1162
+  - tbb 2022.*
+  constrains:
+  - opencl_rt >=2021.3.0
+  license: Intel End User License Agreement for Developer Tools
+  size: 100066465
+  timestamp: 1729183371054
+- kind: conda
+  name: intel-openmp
+  version: 2025.0.0
+  build: intel_1162
+  build_number: 1162
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/intel-openmp-2025.0.0-intel_1162.tar.bz2
+  sha256: 06700819892363d36e7b44856f14aa78c718b500c9df8e8bb0d230ced2cd67a0
+  md5: ba8d719dea94cb7434c53eb761714dad
+  depends:
+  - intel-cmplr-lib-ur 2025.0.0 intel_1162
+  license: Intel End User License Agreement for Developer Tools
+  size: 3628511
+  timestamp: 1729183318319
+- kind: conda
+  name: tbb
+  version: 2022.0.0
+  build: vc14_intel_396
+  build_number: 396
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/tbb-2022.0.0-vc14_intel_396.tar.bz2
+  sha256: 82fa035828ee347eb3265575290282b80caf1dafd31373d4a14468cc3e09b1f7
+  md5: bfaf8f09932d7096d67dcadad6ca50dc
+  depends:
+  - tcm 1.*
+  - vc 14.*
+  features: vc14
+  license: Intel Simplified Software License
+  size: 233474
+  timestamp: 1729179034273
+- kind: conda
+  name: tcm
+  version: 1.2.0
+  build: intel_583
+  build_number: 583
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/tcm-1.2.0-intel_583.tar.bz2
+  sha256: 6acbdfa52d46e2d82a27aef335bdd0dd23bfcf4a9f787555462657a0bec320a8
+  md5: cfceb4b7a7ce10a3e6d8a59d2b1ff24a
+  license: Intel Simplified Software License
+  size: 331715
+  timestamp: 1729178979264
+- kind: conda
+  name: ucrt
+  version: 10.0.22621.0
+  build: h57928b3_1
+  build_number: 1
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/ucrt-10.0.22621.0-h57928b3_1.conda
+  sha256: db8dead3dd30fb1a032737554ce91e2819b43496a0db09927edf01c32b577450
+  md5: 6797b005cd0f439c4c5c9ac565783700
+  constrains:
+  - vs2015_runtime >=14.29.30037
+  license: LicenseRef-MicrosoftWindowsSDK10
+  size: 559710
+  timestamp: 1728377334097
+- kind: conda
+  name: umf
+  version: 0.9.0
+  build: intel_584
+  build_number: 584
+  subdir: win-64
+  url: https://software.repos.intel.com/python/conda/win-64/umf-0.9.0-intel_584.tar.bz2
+  sha256: d6d7e85a56a4c524077b4b38baceabc1440c8e4ff6c08e2ca9febeab45c440be
+  md5: a13b70964caab1a640b8b735d3b44d4b
+  depends:
+  - tcm 1.2.*
+  license: Intel Simplified Software License
+  size: 63130
+  timestamp: 1729178957919
+- kind: conda
+  name: vc
+  version: '14.3'
+  build: ha32ba9b_22
+  build_number: 22
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/vc-14.3-ha32ba9b_22.conda
+  sha256: 2a47c5bd8bec045959afada7063feacd074ad66b170c1ea92dd139b389fcf8fd
+  md5: 311c9ba1dfdd2895a8cb08346ff26259
+  depends:
+  - vc14_runtime >=14.38.33135
+  track_features:
+  - vc14
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 17447
+  timestamp: 1728400826998
+- kind: conda
+  name: vc14_runtime
+  version: 14.40.33810
+  build: hcc2c482_22
+  build_number: 22
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/vc14_runtime-14.40.33810-hcc2c482_22.conda
+  sha256: 4c669c65007f88a7cdd560192f7e6d5679d191ac71610db724e18b2410964d64
+  md5: ce23a4b980ee0556a118ed96550ff3f3
+  depends:
+  - ucrt >=10.0.20348.0
+  constrains:
+  - vs2015_runtime 14.40.33810.* *_22
+  license: LicenseRef-MicrosoftVisualCpp2015-2022Runtime
+  license_family: Proprietary
+  size: 750719
+  timestamp: 1728401055788
+- kind: conda
+  name: vs2022_win-64
+  version: 19.41.34120
+  build: h72b6792_22
+  build_number: 22
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/vs2022_win-64-19.41.34120-h72b6792_22.conda
+  sha256: fe957098537cc2c6e1bf22367d24e6360d50be98468cbc651c50d174c041b681
+  md5: 3468ec40f54e180c1cd382e72c9a8a4b
+  depends:
+  - vswhere
+  constrains:
+  - vs_win-64 2022.11
+  track_features:
+  - vc14
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 20060
+  timestamp: 1728401060214
+- kind: conda
+  name: vs_win-64
+  version: '2022.11'
+  build: h72b6792_22
+  build_number: 22
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/vs_win-64-2022.11-h72b6792_22.conda
+  sha256: 097edbfc845304befdc785ab7ecd6a6a9ed8bf9c277278ccda853118a7fa2be5
+  md5: bfaf189cde3f3561516d06bb0b09b764
+  depends:
+  - vs2022_win-64 19.41.34120.*
+  track_features:
+  - vc14
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 17582
+  timestamp: 1728401063622
+- kind: conda
+  name: vswhere
+  version: 3.1.7
+  build: h57928b3_0
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/vswhere-3.1.7-h57928b3_0.conda
+  sha256: 8caeda9c0898cb8ee2cf4f45640dbbbdf772ddc01345cfb0f7b352c58b4d8025
+  md5: ba83df93b48acfc528f5464c9a882baa
+  license: MIT
+  license_family: MIT
+  size: 219013
+  timestamp: 1719460515960
